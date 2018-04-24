@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/balance_amount_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Balance"
+        android:hint="Balance" />
+
+    <ListView
+        android:id="@+id/lvItem2"
+        android:layout_width="189dp"
+        android:layout_height="431dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView13"
+        android:layout_marginRight="5dp" />
+
+    <ListView
+        android:id="@+id/lvItem1"
+        android:layout_width="193dp"
+        android:layout_height="429dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/textView12"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/balance_amount_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:text="DEBIT" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balance_amount_text"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:text="CREDIT " />
+
+</RelativeLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#18FFFF"
+                android:gravity="center" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/EXPENSE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:id="@+id/table_expense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/amount_name" />
+
+                            <EditText
+                                android:id="@+id/amount_expense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:hint="@string/amount_details"
+                                android:padding="15dp"
+                                android:textAlignment="center" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/category_name" />
+
+                            <TextView
+                                android:id="@+id/category_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
+                                android:hint="Add New Category"
+                                android:inputType="text" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/source_name" />
+
+                            <TextView
+                                android:id="@+id/source_field"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="CASH" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/notes_name" />
+
+                            <EditText
+                                android:id="@+id/notes_expense"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:hint="@string/description_details"
+                                android:padding="15dp"
+                                android:textAlignment="center" />
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/date_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/date_title" />
+
+                            <EditText
+                                android:id="@+id/date_edit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:hint="@string/date_name"
+                                android:padding="15dp"
+                                android:textAlignment="center" />
+
+                        </TableRow>
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/save_income_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/table_expense"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#F44336"
+                        android:onClick="buttonClicked"
+                        android:text="@string/save_expense"
+                        android:textColor="#FFFFFF" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab_expense_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/table_expense"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_close_black_24dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/INCOME"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:id="@+id/table_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/amount_name" />
+
+                            <EditText
+                                android:id="@+id/amount_income"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:hint="@string/amount_details"
+                                android:padding="15dp"
+                                android:textAlignment="center" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/category_name" />
+
+                            <TextView
+                                android:id="@+id/category_income_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Add New Category" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/source_name" />
+
+                            <TextView
+                                android:id="@+id/source_income_field"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="CASH" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/notes_name" />
+
+                            <EditText
+                                android:id="@+id/notes_income"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:hint="@string/description_details"
+                                android:padding="15dp"
+                                android:textAlignment="center" />
+
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="30dp"
+                                android:text="@string/date_title" />
+
+                            <EditText
+                                android:id="@+id/date_picker_income_field"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:hint="@string/date_name"
+                                android:padding="15dp"
+                                android:textAlignment="center" />
+
+                        </TableRow>
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/save_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/table_income"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#4527A0"
+                        android:onClick="buttonSaveClicked"
+                        android:text="@string/save_expense"
+                        android:textColor="#FFFFFF" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/fab_income_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/table_income"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_close_black_24dp" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

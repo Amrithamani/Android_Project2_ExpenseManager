@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Expense Manager</string>
+    <string name="image_logo">imageLogo</string>
+    <string name="track_expense">TRACK YOUR EXPENSE</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="amount_name">Amount:</string>
+    <string name="amount_details">Enter Amount Here</string>
+    <string name="category_name">Category:</string>
+    <string name="spinner_title">Add New Category</string>
+    <string name="source_name">Source</string>
+    <string name="spinner_source_title">CASH</string>
+    <string name="notes_name">Notes(Optional)</string>
+    <string name="description_details">Description</string>
+    <string name="date_name">Select the date</string>
+    <string name="date_title">Date:</string>
+    <string name="save_expense">Save</string>
+</resources>
